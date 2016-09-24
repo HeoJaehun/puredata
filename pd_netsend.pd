@@ -1,0 +1,12 @@
+#N canvas 1599 523 450 300 10;
+#X obj 38 180 netsend;
+#X floatatom 38 225 5 0 0 0 - - -;
+#X msg 115 147 send myVar1 \$1;
+#X floatatom 115 117 5 0 0 0 - - -;
+#X msg 64 69 send MyText anything;
+#X msg 38 33 connect 192.168.0.13 13001;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
