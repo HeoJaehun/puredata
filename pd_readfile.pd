@@ -1,0 +1,30 @@
+#N canvas 1335 196 450 638 10;
+#X obj 305 48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 305 74 \; pd dsp \$1;
+#X msg 199 108 start;
+#X msg 199 133 stop;
+#X obj 126 199 readsf~ 2;
+#X obj 192 272 dac~ 1 2;
+#X msg 126 74 open ./sound/test.wav;
+#X obj 85 364 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 36 364 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 45 255 env~;
+#X obj 45 291 - 100;
+#X obj 94 255 env~;
+#X obj 94 291 - 100;
+#X obj 266 220 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 9 0;
+#X connect 4 1 5 1;
+#X connect 4 1 11 0;
+#X connect 4 2 13 0;
+#X connect 6 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 1;
+#X connect 11 0 12 0;
+#X connect 12 0 7 1;
